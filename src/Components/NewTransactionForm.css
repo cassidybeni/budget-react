@@ -1,0 +1,20 @@
+input {
+  display: block;
+  text-align: center;
+  width: 50%;
+  height: 25px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  border: none;
+}
+
+input[type="submit"] {
+  width: 25%;
+  background-color: #5f835f;
+  color: rgb(255, 255, 255);
+  
+}
+
+div {
+  padding: 25px;
+}
