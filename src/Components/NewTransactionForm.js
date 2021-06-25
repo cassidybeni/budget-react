@@ -22,7 +22,7 @@ function NewTransactionForm(props) {
         <label>
           Date:
           <input
-            type="text"
+            type="date"
             placeholder="date"
             onChange={(e) => setTransactions(e.target.value)}
             value={transaction.date}
