@@ -10,9 +10,15 @@ function NewTransactionForm(props) {
     from: "",
   });
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setTransactions({ ...transaction, [name]: value });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.addTransaction(transaction); //undefined
+    props.addTransaction(transaction);
+    console.log(transaction);
     props.history.push("/transactions");
   };
 
@@ -24,7 +30,8 @@ function NewTransactionForm(props) {
           <input
             type="date"
             placeholder="date"
-            onChange={(e) => setTransactions(e.target.value)}
+            onChange={handleChange}
+            name="date"
             value={transaction.date}
           ></input>
         </label>
@@ -33,7 +40,8 @@ function NewTransactionForm(props) {
           <input
             type="text"
             placeholder="name"
-            onChange={(e) => setTransactions(e.target.value)}
+            onChange={handleChange}
+            name="name"
             value={transaction.name}
           ></input>
         </label>
@@ -42,7 +50,8 @@ function NewTransactionForm(props) {
           <input
             type="number"
             placeholder="amount"
-            onChange={(e) => setTransactions(Number(e.target.value))}
+            onChange={handleChange}
+            name="amount"
             value={transaction.amount}
           ></input>
         </label>
@@ -51,7 +60,8 @@ function NewTransactionForm(props) {
           <input
             type="text"
             placeholder="from"
-            onChange={(e) => setTransactions(e.target.value)}
+            onChange={handleChange}
+            name="from"
             value={transaction.from}
           ></input>
         </label>
