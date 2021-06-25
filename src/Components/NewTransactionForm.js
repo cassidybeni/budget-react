@@ -18,7 +18,6 @@ function NewTransactionForm(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.addTransaction(transaction);
-    console.log(transaction);
     props.history.push("/transactions");
   };
 
