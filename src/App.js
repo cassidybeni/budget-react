@@ -30,7 +30,7 @@ function App() {
       setTransactions(data);
     });
   }, []);
-
+  
   return (
     <div className="App">
       <Router>

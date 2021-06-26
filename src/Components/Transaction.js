@@ -10,7 +10,7 @@ function Transaction({ transaction }) {
         <p>{transaction.name}</p>
       </td>
       <td>
-        <p>{`$${transaction.amount}`}</p>
+        <p>{`$${transaction.amount.toFixed(2)}`}</p>
       </td>
     </tr>
   );
