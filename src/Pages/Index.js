@@ -6,7 +6,7 @@ function Index({ transactions }) {
   return (
     <div>
       <h1>Index</h1>
-      <h2>Account Total: $1,000</h2>
+      <h2>Account Total:</h2>
       <Transactions transactions={transactions} />
     </div>
   );
