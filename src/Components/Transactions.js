@@ -4,12 +4,12 @@ import Transaction from "../Components/Transaction";
 function Transactions({ transactions }) {
   let total = 0;
   transactions.forEach((transaction) => {
-    total += transaction.amount;
+    total += Number(transaction.amount);
   });
 
   return (
     <div>
-      <h1>Balance: ${total.toFixed(2)}</h1>
+      <h1>Balance: ${total}</h1>
       <table>
         <thead>
           <tr>
