@@ -1,4 +1,5 @@
 import React from "react";
+import numeral from "numeral";
 
 function Transaction({ transaction }) {
   return (
@@ -10,7 +11,7 @@ function Transaction({ transaction }) {
         <p>{transaction.name}</p>
       </td>
       <td>
-        <p>{transaction.amount}</p>
+        <p>{numeral(transaction.amount).format('$0,0.00')}</p>
       </td>
     </tr>
   );

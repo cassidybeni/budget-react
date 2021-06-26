@@ -2,10 +2,7 @@ import React from "react";
 import Transaction from "../Components/Transaction";
 
 function Transactions({ transactions }) {
-  let total = 0;
-  transactions.forEach((transaction) => {
-    total += Number(transaction.amount);
-  });
+  let total = transactions.reduce((a, b) => a + Number(b.amount), 0);
 
   return (
     <div>
